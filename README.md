@@ -82,13 +82,14 @@ Clone this repository to your desired folder:
   git clone git@github.com:atok624/bookstore.git
 ```
 
-<!--
-Example:
+## Install
+Install this project with:
 
 ```sh
+  cd my-folder
+  npx create-react-app .
 
 ```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
