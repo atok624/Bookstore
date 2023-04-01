@@ -1,0 +1,137 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Navigation Component */
+.navigation {
+  background-color: #333;
+  color: #fff;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-container {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Book Component */
+.book-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.books-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.book-item {
+  width: 30%;
+  margin-bottom: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #e6e6e6;
+  padding: 20px;
+}
+
+.first-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.author {
+  font-size: 16px;
+}
+
+.book-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-option button {
+  margin-right: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.second-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.second-section p {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e6e6e6;
+  margin: 20px 0;
+}
+
+.Third-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Third-section p:first-of-type {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.Third-section p:last-of-type {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.update-progress {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+/* Form Component */
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
