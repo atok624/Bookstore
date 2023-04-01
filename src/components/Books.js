@@ -1,6 +1,6 @@
 import React from 'react';
-import MyBook from './BookItem';
-import Form from './BookForm';
+import MyBook from './bookItem';
+import Form from './bookForm';
 
 function Books() {
   const Books = [
