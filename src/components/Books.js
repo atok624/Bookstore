@@ -1,7 +1,6 @@
-/* eslint-disable import/extensions */
 import React from 'react';
-import MyBook from './bookItem.js';
-import Form from './bookForm.js';
+import MyBook from './BookItem';
+import Form from './BookForm';
 
 function Books() {
   const Books = [
