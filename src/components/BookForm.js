@@ -1,19 +1,39 @@
-import React from 'react';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { addBook } from '../redux/books/booksSlice';
 
-function Form() {
-  <div className="form">
-    <h2> ADD NEW BOOK</h2>
-    <form className="form-main">
+const BookForm = () => {
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  const dispatch = useDispatch();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (title && author) dispatch(addBook({ id: uuidv4(), title, author }));
+    setTitle('');
+    setAuthor('');
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
       <input
-        className="title"
-        placeholder="Book title"
         type="text"
+        placeholder=" Book Title"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
         required
       />
-      <input className="author" placeholder="Book author" type="text" required />
-      <input className="submit-btn" value="Add Book" type="submit" />
+      <input
+        type="text"
+        placeholder="Book Author"
+        value={author}
+        onChange={(e) => setAuthor(e.target.value)}
+        required
+      />
+      <button type="submit">Add Book</button>
     </form>
-  </div>;
-}
+  );
+};
 
-export default Form;
+export default BookForm;
