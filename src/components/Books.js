@@ -1,59 +1,29 @@
-import React from 'react';
-import MyBook from './BookItem';
-import Form from './BookForm';
+import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
+import { removeBook } from '../redux/books/booksSlice';
 
-function Books() {
-  const Books = [
-    {
-      author: 'Kofi Adzor',
-      title: 'The Power of a woman',
-    },
-    {
-      author: 'Nicholas Amissah',
-      title: 'The Lion King',
-    },
-  ];
+const Books = ({ book }) => {
+  const dispatch = useDispatch();
   return (
-    <div className="book-container">
-      <div className="books-list">
-        {Books.map((book) => (
-          <div key={Books.indexOf(book)} className="book-item">
-            <div className="first-section">
-              <MyBook title={book.title} author={book.author} />
-              <br />
-              <div className="book-option">
-                <button type="button" className="comments-btn">
-                  Comments
-                </button>
-                <div className="divider" />
-                <button type="button" className="remove-btn">
-                  Removed
-                </button>
-                <div className="divider" />
-                <button type="button" className="edit-btn">
-                  Edit
-                </button>
-              </div>
-            </div>
-            <div className="second-section">
-              <p>50% completed</p>
-            </div>
-            <div className="divider" />
-            <div className="Third-section">
-              <p>CURRENT CHAPTER</p>
-              <p>CHAPTER 24</p>
-              <br />
-              <button type="button" className="update-progress">
-                UPDATE PROGRESS
-              </button>
-            </div>
-          </div>
-        ))}
+    <li>
+      <h2>{book.title}</h2>
+      <p>{book.author}</p>
+      <div className="book-actions-container">
+        <button type="button" onClick={() => dispatch(removeBook(book.id))}>
+          Remove
+        </button>
+        <button type="button">Edit</button>
       </div>
-      <hr />
-      <Form />
-    </div>
+    </li>
   );
-}
+};
+
+Books.propTypes = {
+  book: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default Books;
