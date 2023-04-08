@@ -1,27 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { MdPerson } from 'react-icons/md';
 
 function Navigation() {
   return (
-    <div className="navigation">
-      <div className="navigation-container">
-        <div className="navigation-item">
-          <nav className="nav">
-            <h1 className="cms">Bookstore CMS</h1>
-            <Link to="/" className="">
-              Books
-            </Link>
-            <Link to="/categories" className="">
-              Categories
-            </Link>
-          </nav>
-        </div>
-        <div className="mdperson">
+    <header className="header">
+      <nav className="nav">
+        <ul className="navbar">
+          <NavLink to="/" className="logo">BOOKSTORE CMS</NavLink>
+          <li><NavLink to="/" className={({ isActive }) => (isActive ? 'active-link' : 'nav-link')}>BOOKS</NavLink></li>
+          <li><NavLink to="/categories" className={({ isActive }) => (isActive ? 'active-link' : 'nav-link')}>CATEGORIES</NavLink></li>
+        </ul>
+        <div className="oval">
           <MdPerson className="profile" />
         </div>
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 }
 
