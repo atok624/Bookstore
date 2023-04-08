@@ -10,12 +10,17 @@ const BookList = () => {
   useEffect(() => {
     dispatch(getBooks());
   }, []);
+
   return (
-    <ul>
-      {books.map((book) => (
-        <Book key={book.item_id} book={book} />
-      ))}
-    </ul>
+    <section className="booklist-container">
+      <div className="booklist-wrapper">
+        <ul className="booklist">
+          {books.map((book) => (
+            <Book key={book.item_id} book={book} />
+          ))}
+        </ul>
+      </div>
+    </section>
   );
 };
 

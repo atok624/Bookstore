@@ -46,15 +46,12 @@
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
-
-### Future Features <a name="key-features"></a>
 - **API Functionality**
-- **Events**
 
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- comming soon
+- coming soon
 
 
 
