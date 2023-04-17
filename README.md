@@ -69,6 +69,15 @@ Access the the online version of my application with this link
 ### Prerequisites
 
 In order to run this project you need:
+```sh
+npm install
+npm start
+Runs the app in the development mode.
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.
+You may also see any lint errors in the console.
+```
 
 ### Setup
 
@@ -83,15 +92,12 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd my-folder
-  npx create-react-app .
-
+  npm install.
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Usage
-
+## Usage 
 Run in development mode (Port 3000)
 
 ```
