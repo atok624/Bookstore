@@ -51,7 +51,7 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- coming soon
+- (live)[https://book-store-60a4.onrender.com/]
 
 
 
